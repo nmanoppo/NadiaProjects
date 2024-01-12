@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Join our Mailing List</title>
+    <link rel="stylesheet" href="styles/mailList.css"/>
+    <link rel="icon" type="images/booklogo.png" href="images/booklogo.png">
+    <script src="js/myForm.js"></script>
+</head>
+<body>
+<header>
+    <h6>Nadia Manoppo, 11/11/2022, IT202001, Semester Project Phase 2</h6>
+        <nav class="navbar">
+            <img src="images/booklogo.png" alt="BookWorld Logo" width="400">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="create.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+</header>
+<main>
+    <h1>Join Our Mailing list</h1>
+    <p>Receive weekly updates on new books, price items, and events that are happening</p>
+    <p>Fill out the form below with your information!</p>
+    <br>
+    <section class="info-container">
+        <form id='form' method="post" action="http://www.randyconnolly.com/tests/process.php">
+        <fieldset id="name">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="John" minlength="2" maxlength="150" onfocus="highlightInput(this)" required>
+            <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname"  placeholder="Bryers" minlength="2" maxlength="150" onfocus="highlightInput(this)" required>
+            <br>
+        </fieldset>
+        <fieldset id="email">
+            <label for="emails">Enter your email:</label>
+            <input type="email" id="emails" name="email" placeholder="name@example.com" maxlength="150" onfocus="highlightInput(this)" required>
+            <br>
+        </fieldset>
+        <fieldset id="address">
+            <label for="addressName">Street address:</label>
+            <input type="text" id="addressName" name="address" placeholder="123 Street Ave" minlength="10" maxlength="150" onfocus="highlightInput(this)" required>
+            <br>
+            <label for="cityName">City:</label>
+            <input type="text" id="cityName" name="city" placeholder="Belleview" minlength="2" maxlength="150" onfocus="highlightInput(this)" required>
+            <br>
+            <label for="stateName">State:</label>
+            <input type="text" id="stateName" name="state" placeholder="NJ" minlength="2" maxlength="2" onfocus="highlightInput(this)" required>
+            <br>
+        </fieldset>
+        <fieldset id="review">
+            <label for="reviewName">How Did You Hear About Us?</label>
+            <select id="reviewName" name="review">
+                <option value="" disabled selected hidden>--Select One--</option>
+                <option value="google">Google Search</option>
+                <option value="friend">Friend</option>
+                <option value="yellowPages">Yellow Pages</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="employee">Employee</option>
+            </select>
+        </fieldset>
+            <br>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

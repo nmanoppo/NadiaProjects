@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create</title>
+    <link rel="stylesheet" href="styles/createstyle.css"/>
+    <link rel="icon" type="images/booklogo.png" href="images/booklogo.png">
+    <script src="js/myForm.js"></script>
+</head>
+<body>
+    <header>
+        <h6>Nadia Manoppo, 11/11/2022, IT202001, Semester Project Phase 1</h6>
+        <nav class="navbar">
+            <img src="images/booklogo.png" alt="BookWorld Logo" width="400">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="create.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+        <main>
+            <h1 style="text-align: center">Welcome to the Create Page!</h1>
+            <P style="text-align: center">Here you are able to create a book that you want added to our BookWorld library</P>
+        </main>
+        <section class="form_section">
+            <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+                <fieldset id="category">
+                    <h1>Fill out the form below:</h1>
+                    <label for="categories">Choose a category:</label>
+                    <select id="categories" name="category_name" required>
+                        <option value="" disabled selected hidden>--Select One--</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Romance">Romance</option>
+                        <option value="ScienceFiction">Science Fiction</option>
+                        <option value="Educational">Educational</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset id="bookInfo">
+                    <label for="bookcode">Book Code:</label>
+                    <input type="text" id="bookcode" name="bookcode" placeholder="6 digit number" minlength="5" maxlength="10" onfocus="highlightInput(this)" required>
+                    <br>
+                    <label for="bookname">Book Name:</label>
+                    <input type="text" id="bookname" name="bookname" minlength="25" maxlength="255" onfocus="highlightInput(this)" required>
+                </fieldset>
+                <br>
+                <fieldset id="bookDescription">
+                    <label for="description">Book Description</label>
+                    <textarea type="text" id="bookDescription" name="description" minlength="25" maxlength="255" onfocus="highlightInput(this)" placeholder="Enter the description for your book"></textarea>
+                </fieldset>
+                <br>
+                <fieldset id="bookPrice">
+                    <label for="bookprice">Book Price:</label>
+                    <input type="number" id="bookprice" name="bookprice" step="0.01" onchange="setTwoNumberDecimal" min="0" max="9999999999" value="0.00" onfocus="highlightInput(this)" required/>
+                    <!--9,999,999,999 is the same as 10 digit maximum-->
+                </fieldset>
+                <br>
+                <button id="reset" type="reset">Reset</button>
+                <button id="submit" type="submit">Submit</button>
+                <br>
+            </form>
+        </section>
+    </header>
+    <footer>
+        <p><em>Copyright &copy; 2012 BookWorld!</em></p>
+    </footer>
+</body>
+</html>
